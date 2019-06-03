@@ -1,0 +1,48 @@
+/* components/movieCard/movieCard.wxss */
+.itemBox{
+    width: 100%;
+    margin: 0 auto 20rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    position: relative;
+}
+.itemBox image{
+    width: 30%;
+    height: 256rpx;
+    vertical-align: middle;
+    transform: scale(0.95, 0.95);
+}
+.itemBox .right{
+    display: inline-block;
+    width: 70%;
+    height: 256rpx;
+    line-height: 51rpx;
+    vertical-align: middle;
+}
+.itemBox .right text{
+    width: 90%;
+    font-size: 24rpx;
+    display: block;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.itemBox .right text.title{
+    font-size: 30rpx;
+    font-weight: 900;
+}
+.itemBox .right text.tag{
+    display: inline;
+    background: #20B2AA;
+    color: #fff;
+    margin: 0 10rpx;
+    padding: 0 5rpx;
+    border-radius: 25.5rpx;
+}
+.itemBox .right button{
+    position: absolute;
+    background: #48D1CC;
+    color: #fff;
+    right: 30rpx;
+    top: 50%;
+    margin-top: -30rpx;
+}

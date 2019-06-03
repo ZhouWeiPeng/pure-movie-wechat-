@@ -1,0 +1,4 @@
+/* pages/actors/actors.wxss */
+.item{
+    margin: 20rpx 0;
+}

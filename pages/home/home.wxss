@@ -1,0 +1,78 @@
+/* pages/home/home.wxss */
+.startImg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #48D1CC;
+    color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: start 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+.startImg text{
+    text-align: center;
+    flex-basis: 10%;
+    animation: text 1s ease-in-out;
+}
+@keyframes start{
+    from{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(3,3);
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@keyframes text{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.tabbar{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background: #fff;
+    z-index: 2;
+}
+.tabbar .tab{
+    font-size: 30rpx;
+    padding: 10rpx;
+    text-align: center;
+    transition: all .5s;
+}
+.active{
+    background: #f0f0f0;
+    color: #48D1CC;
+}
+.content0{
+    margin-top: 80rpx;
+    width: 100%;
+    transform: scale(0, 0);
+    opacity: 0;
+    z-index: -1;
+    transition: all .5s;
+    position: absolute;
+}
+.content{
+    transform: scale(1, 1);
+    opacity: 1;
+    z-index: 1;
+}

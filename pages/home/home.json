@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+      "movie-card-sp": "/components/movieCardSP/movieCardSP",
+      "movie-card-ry": "/components/movieCardRY/movieCardRY",
+      "movie-card-sy": "/components/movieCardSY/movieCardSY",
+      "van-tab": "/dist/tab/index",
+      "van-tabs": "/dist/tabs/index"
+  }
+}

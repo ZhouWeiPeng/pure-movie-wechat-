@@ -1,0 +1,20 @@
+<!--components/movieCard/movieCard.wxml-->
+<view wx:for="{{movieList}}" wx:key="{{index}}" class="itemBox" data-id="{{item.movieId}}" data-title="{{item.titleCn}}" data-count="{{item.wantedCount}}" bindtap="getDetail">
+    <image src="{{item.img}}" lazy-load="true" mode="aspectFit"></image>
+    <view class="right" wx:if="{{item.ratingFinal > 0}}">
+        <text class="title">{{item.titleCn}}</text>
+        <text>{{item.titleEn}}</text>
+        <text>评分：{{item.ratingFinal}}</text>
+        <text>主演：{{item.actorName1 + '/' + item.actorName2}}</text>
+        <text>类型：{{item.type}}<text class="tag" wx:if="{{item.isIMAX3D}}">3DIMAX</text></text>
+        <!-- <button size="mini" data-id="{{item.movieId}}" bindtap="getDetail">详情</button> -->
+    </view>
+    <view class="right" wx:else>
+        <text class="title">{{item.titleCn}}</text>
+        <text>{{item.titleEn}}</text>
+        <text>主演：{{item.actorName1 + '/' + item.actorName2}}</text>
+        <text>类型：{{item.type}}</text>
+        <text>{{item.rYear}}-{{item.rMonth}}-{{item.rDay}}上映<text class="tag" wx:if="{{item.isIMAX3D}}">3DIMAX</text></text>
+        <!-- <button size="mini" data-id="{{item.movieId}}" bindtap="getDetail">详情</button> -->
+    </view>
+</view>

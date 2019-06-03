@@ -1,0 +1,6 @@
+<!--pages/video/video.wxml-->
+<video-box wx:for="{{videoData}}" wx:key="{{index}}" url="{{item.url}}" title="{{item.title}}"></video-box>
+
+<van-cell-group>
+    <van-cell title="更多" is-link bind:click="getMoreVideo" />
+</van-cell-group>

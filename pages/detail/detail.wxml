@@ -1,0 +1,63 @@
+<!--pages/detail/detail.wxml-->
+<wxs src="../../utils/formatTime.wxs" module="tools" />
+
+<!-- 左图右字 -->
+<view class="topBox">
+    <image mode="aspectFit" lazy-load="true" src="{{detailData.basic.img}}"></image>
+    <view class="info">
+        <text class="title">{{detailData.basic.name}}</text>
+        <text>{{detailData.basic.nameEn}}</text>
+        <van-rate readonly value="{{detailData.basic.overallRating / 2}}" wx:if="{{detailData.basic.overallRating > 0}}" />
+        <text class="want" wx:else>{{wantedCount}}人想看</text>
+        <text>{{detailData.basic.mins}}</text>
+        <text>{{tools.formatTime(detailData.basic.releaseDate)}}上映</text>
+    </view>
+    <view class="mask">
+        <image mode="aspectFill" src="{{detailData.basic.img}}"></image>
+    </view>
+</view>
+
+<!-- 简介 -->
+<view class="story">
+    <button bindtap="sorry">特惠购票</button>
+    <text>{{detailData.basic.story}}</text>
+</view>
+
+<!-- 演员 -->
+<view class="actors">
+    <view class="actorsItem">
+        <image src="{{detailData.basic.director.img}}" lazy-load="true" mode="scaleToFill"></image>
+        <view>{{detailData.basic.director.name ? detailData.basic.director.name : detailData.basic.director.nameEn}}</view>
+        <view class="role">导演</view>
+    </view>
+    <view class="actorsItem" wx:for="{{detailData.basic.actors}}" wx:key="{{index}}">
+        <image src="{{item.img}}" lazy-load="true" mode="scaleToFill"></image>
+        <view>{{item.name ? item.name : item.nameEn}}</view>
+        <view class="role">{{item.roleName}}</view>
+    </view>
+</view>
+<van-cell-group>
+    <van-cell title="全部演职人员" is-link url="{{'/pages/actors/actors?id=' + detailData.basic.movieId + '&title=' + detailData.basic.name}}" />
+</van-cell-group>
+
+<!-- 预告片 -->
+<video-box url="{{detailData.basic.video.url}}" title="{{detailData.basic.video.title}}"></video-box>
+
+<van-cell-group>
+    <van-cell title="视频" is-link url="{{'/pages/video/video?id=' + detailData.basic.movieId + '&title=' + detailData.basic.name}}" />
+    <van-cell title="剧照" is-link url="{{'/pages/picture/picture?id=' + detailData.basic.movieId + '&title=' + detailData.basic.name}}" />
+</van-cell-group>
+
+<!-- 评论 -->
+<view>
+    <text class="tTitle" wx:if="{{miniCom.length > 0}}">短评</text>
+    <comment wx:for="{{miniCom}}" wx:key="{{index}}" name="{{item.nickname}}" avatar="{{item.headImg}}" content="{{item.content}}"></comment>
+    <van-cell-group wx:if="{{miniCom.length > 0}}">
+        <van-cell title="查看更多短评" is-link url="{{'/pages/comment/comment?id=' + detailData.basic.movieId + '&type=mini' + '&title=' + detailData.basic.name}}" />
+    </van-cell-group>
+    <text class="tTitle" wx:if="{{plusCom.length > 0}}">精选影评</text>
+    <comment wx:for="{{plusCom}}" wx:key="{{index}}" name="{{item.nickname}}" avatar="{{item.headImg}}" content="{{item.content}}"></comment>
+    <van-cell-group wx:if="{{plusCom.length > 0}}">
+        <van-cell title="查看更多精选影评" is-link url="{{'/pages/comment/comment?id=' + detailData.basic.movieId + '&type=plus' + '&title=' + detailData.basic.name}}" />
+    </van-cell-group>
+</view>

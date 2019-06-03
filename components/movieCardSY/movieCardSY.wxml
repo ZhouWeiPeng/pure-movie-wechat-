@@ -1,0 +1,12 @@
+<!--components/movieCard/movieCard.wxml-->
+<view wx:for="{{movieList}}" wx:key="{{index}}" class="itemBox" data-id="{{item.id}}" data-title="{{item.title}}" data-count="{{item.wantedCount}}" bindtap="getDetail">
+    <image src="{{item.image}}" lazy-load="true" mode="aspectFit"></image>
+    <view class="right">
+        <text class="title">{{item.title}}</text>
+        <text>导演：{{item.director}}</text>
+        <text>主演：{{item.actor1 + '/' + item.actor1}}</text>
+        <text>类型：{{item.type}}</text>
+        <text>{{item.rYear}}-{{item.rMonth}}-{{item.rDay}}上映</text>
+        <!-- <button size="mini" data-id="{{item.movieId}}" bindtap="getDetail">详情</button> -->
+    </view>
+</view>

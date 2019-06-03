@@ -1,0 +1,12 @@
+<!--pages/comment/comment.wxml-->
+<view wx:if="{{type == 'mini'}}">
+    <comment wx:for="{{commentsData}}" wx:key="{{index}}" name="{{item.ca}}" avatar="{{item.caimg}}" content="{{item.ce}}"></comment>
+</view>
+
+<view wx:else>
+    <comment wx:for="{{commentsData}}" wx:key="{{index}}" name="{{item.nickname}}" avatar="{{item.headurl}}" content="{{item.content}}"></comment>
+</view>
+
+<van-cell-group>
+    <van-cell title="更多" is-link bind:click="getMoreComment" />
+</van-cell-group>

@@ -1,0 +1,5 @@
+<!--components/video/video.wxml-->
+<view class="videoBox">
+    <text class="tTitle">{{title}}</text>
+    <video src="{{url}}" controls title="{{title}}" />
+</view>

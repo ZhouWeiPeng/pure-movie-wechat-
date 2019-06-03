@@ -1,0 +1,7 @@
+<van-cell-group>
+    <view class="comItem">
+        <image src="{{avatar}}" class="avatar"></image>
+        <text>{{name}}</text>
+        <view>{{content}}</view>
+    </view>
+</van-cell-group>

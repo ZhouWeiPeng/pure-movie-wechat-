@@ -1,0 +1,150 @@
+/* 上部分左图右字 */
+
+.topBox {
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20rpx #8a8a8a inset;
+}
+
+/* 封面图 */
+
+.topBox image {
+    height: 400rpx;
+    width: 200rpx;
+    margin-right: 20rpx;
+}
+
+/* 右部 */
+
+.info {
+    height: 250rpx;
+    line-height: 50rpx;
+}
+
+.info text {
+    display: block;
+    font-size: 24rpx;
+    color: #fff;
+    text-shadow: 0 0 10rpx #8a8a8a;
+    width: 60vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 标题 */
+
+.info text.title {
+    font-weight: 900;
+    font-size: 30rpx;
+}
+
+/* 想看 */
+
+.info text.want {
+    font-weight: 900;
+    font-size: 30rpx;
+    color: #e4393c;
+}
+
+/* 蒙层 */
+
+.topBox .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-filter: blur(40rpx);
+    -moz-filter: blur(40rpx);
+    -ms-filter: blur(40rpx);
+    -o-filter: blur(40rpx);
+    filter: blur(40rpx);
+}
+
+/* 蒙层图片 */
+
+.mask image {
+    width: 100%;
+}
+
+/* 中间部分 */
+
+.story {
+    padding: 30rpx;
+    font-size: 24rpx;
+}
+
+/* 按钮 */
+
+.story button {
+    margin-bottom: 20rpx;
+    background: #48d1cc;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+/* 简介 */
+
+.story text {
+    text-indent: 2em;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/* 伪类分隔线 */
+
+.space:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20rpx;
+    background: #f0f0f0;
+    margin: 30rpx auto;
+}
+
+/* 演员 */
+
+.actors {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.actors .actorsItem {
+    height: auto;
+    display: inline-block;
+    margin: 30rpx;
+}
+
+.actors .actorsItem image {
+    height: 180rpx;
+    width: 130rpx;
+}
+
+.actors .actorsItem view {
+    font-size: 24rpx;
+    width: 130rpx;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.actors .actorsItem view.role {
+    color: #8a8a8a;
+}
+
+.tTitle {
+    margin: 30rpx;
+    font-size: 30rpx;
+    font-weight: 900;
+    display: block;
+}

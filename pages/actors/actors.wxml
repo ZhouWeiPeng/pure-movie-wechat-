@@ -1,0 +1,8 @@
+<!--pages/actors/actors.wxml-->
+<van-collapse value="{{activeName}}" bind:change="onChange" accordion>
+    <van-collapse-item wx:for="{{actorsData}}" wx:key="{{index}}" title="{{item.typeName}}" name="{{index}}">
+        <view wx:for="{{item.persons}}" wx:for-item="it" wx:for-index="i" wx:key="{{i}}" class="item">
+            {{it.name != '' ? it.name : it.nameEn}}
+        </view>
+    </van-collapse-item>
+</van-collapse>

@@ -1,0 +1,22 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/detail/detail",
+        "pages/actors/actors",
+        "pages/comment/comment",
+        "pages/picture/picture",
+        "pages/video/video"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#48D1CC",
+        "navigationBarTitleText": "时光荏苒",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json"
+}

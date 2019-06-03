@@ -1,0 +1,18 @@
+/* components/video/video.wxss */
+.videoBox {
+    width: 100%;
+    margin: 30rpx auto;
+}
+
+.videoBox video {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.tTitle {
+    margin: 30rpx;
+    font-size: 30rpx;
+    font-weight: 900;
+    display: block;
+}

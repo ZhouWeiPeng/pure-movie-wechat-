@@ -1,0 +1,20 @@
+/* components/comment/comment.wxss */
+.comItem{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30rpx 0;
+    font-size: 24rpx;
+}
+.comItem .avatar{
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.comItem text{
+    margin-left: 20rpx;
+}
+.comItem view{
+    color: #8a8a8a;
+    margin-left: 100rpx;
+}
